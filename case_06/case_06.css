@@ -48,7 +48,7 @@ section:nth-child(2){
 }
 
 section:nth-child(2)>div{
-    height: 20vh;
+    height: 50vh;
     width: 100vw;
 
     background: url("assets/images/city.png");
@@ -66,5 +66,73 @@ section:nth-child(2)>div{
 
     to{
         transform: translateX(-100%);
+    }
+}
+
+div>div:first-child{
+
+    height: 150px;
+    width: 400px;
+
+    top: 0;
+    bottom: -70vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    position: absolute;
+
+    background: url("assets/images/car.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div>div:nth-child(2){
+    height: 80px;
+    aspect-ratio: 1/1;
+
+    top: 0;
+    bottom: -80vh;
+    right: 0;
+    left: -13.5vw;
+    margin: auto;
+
+    position: absolute;
+
+    background: url("assets/images/wheel.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: wheel 2s infinite linear;
+}
+
+div>div:nth-child(3){
+    height: 80px;
+    aspect-ratio: 1/1;
+
+    top: 0;
+    bottom: -80vh;
+    right: 0;
+    left: 12vw;
+    margin: auto;
+
+    position: absolute;
+
+    background: url("assets/images/wheel.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: wheel 2s infinite linear;
+}
+
+@keyframes wheel {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
     }
 }
